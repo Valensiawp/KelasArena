@@ -1,0 +1,12 @@
+{
+  "projectId": "kelasarena",
+  "appId": "1:288664148859:web:a3f273f9bed7d71f913bde",
+  "apiKey": "AIzaSyB6HxfogMzd8GeNdfKP0hO1Of-rKHlhnUI",
+  "authDomain": "kelasarena.firebaseapp.com",
+  "firestoreDatabaseId": "(default)",
+  "storageBucket": "kelasarena.firebasestorage.app",
+  "messagingSenderId": "288664148859",
+  "measurementId": "G-JCF90XM10V",
+  "oAuthClientId": "288664148859-6vbvnt4nt127k5fmv7a5vnqv50arf36f.apps.googleusercontent.com",
+  "recaptchaSiteKey": ""
+}

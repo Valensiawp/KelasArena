@@ -1,0 +1,6 @@
+{
+  "name": "KelasArena",
+  "description": "Aplikasi Web SaaS Pendidikan Multi-Tenant & Arena Live Kuis AI",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

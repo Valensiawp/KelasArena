@@ -1,0 +1,90 @@
+{
+  "entities": {
+    "schools": {
+      "title": "Schools",
+      "description": "Multi-tenant school entities managed by Super Admin",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "code": { "type": "string" },
+        "operator_username": { "type": "string" },
+        "operator_email": { "type": "string" },
+        "created_at": { "type": "string" }
+      },
+      "required": ["id", "name", "code"]
+    },
+    "users": {
+      "title": "Users",
+      "description": "Unified user collection across all roles (super_admin, school_operator, teacher, student)",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "username": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["super_admin", "school_operator", "teacher", "student"] },
+        "teacherRole": { "type": "string", "enum": ["Wali Kelas", "Guru Mapel", "Wali Kelas & Guru Mapel"] },
+        "school_id": { "type": "string" },
+        "class_id": { "type": "string" },
+        "created_at": { "type": "string" }
+      },
+      "required": ["uid", "name", "role"]
+    },
+    "classes": {
+      "title": "Class Rooms",
+      "description": "Permanent Class Rooms with alphanumeric 6-digit codes",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "code": { "type": "string" },
+        "name": { "type": "string" },
+        "subject": { "type": "string" },
+        "grade_level": { "type": "string" },
+        "teacher_id": { "type": "string" },
+        "teacher_name": { "type": "string" },
+        "school_id": { "type": "string" },
+        "student_ids": { "type": "array", "items": { "type": "string" } },
+        "created_at": { "type": "string" }
+      },
+      "required": ["id", "code", "name", "school_id"]
+    },
+    "materials": {
+      "title": "Teaching Materials",
+      "description": "Learning documents uploaded by teachers per class",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "file_url": { "type": "string" },
+        "file_type": { "type": "string" },
+        "class_id": { "type": "string" },
+        "school_id": { "type": "string" },
+        "teacher_id": { "type": "string" },
+        "created_at": { "type": "string" }
+      }
+    },
+    "quizzes": {
+      "title": "Quizzes",
+      "description": "Live quiz rooms generated manually or via Gemini AI",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "code": { "type": "string" },
+        "title": { "type": "string" },
+        "grade_level": { "type": "string" },
+        "question_type": { "type": "string" },
+        "school_id": { "type": "string" },
+        "teacher_id": { "type": "string" },
+        "teacher_name": { "type": "string" },
+        "status": { "type": "string", "enum": ["lobby", "active", "finished"] },
+        "questions": { "type": "array" },
+        "timer_per_question": { "type": "number" },
+        "max_participants": { "type": "number" },
+        "lock_room": { "type": "boolean" },
+        "created_at": { "type": "string" }
+      }
+    }
+  }
+}
