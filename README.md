@@ -14,3 +14,6 @@ Untuk Setup awal **npm install firebase** Baru  **firebase login**
 1. firebase init
 2. npm run build
 3. firebase deploy --only hosting
+
+username Akun Test : Admin
+pw akun Test : 12345678
